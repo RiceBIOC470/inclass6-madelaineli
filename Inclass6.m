@@ -64,6 +64,7 @@ index = strfind(description,'Actual Temperature=');
 pos = length('Actual Temperature=');
 phrase = '';
 
+%find the numbers after actual temperature
 for ii = 0:5
     num = description(index+pos+ii);
     phrase = strcat(phrase,num);
