@@ -62,13 +62,11 @@ info = imfinfo(filename,'tif');
 description = info.ImageDescription;
 index = strfind(description,'Actual Temperature=');
 pos = length('Actual Temperature=');
-phrase = '';
 
-for ii = 0:5
+for ii = 0:10
     num = description(index+pos+ii);
-    phrase = strcat(phrase,num);
-    if ~isempty(str2num(phrase))
-        temp = phrase;
-    end
-end
+    while 
+    phrase = str(phrase,num)
+%phrase = description(index+pos:index+pos+2);
+temp = str2num(phrase);
 end
